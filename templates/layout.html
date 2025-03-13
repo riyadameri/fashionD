@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="ar">
+{% load static %}
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>متجر فاخر للكراء</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <header>
+        <div class="logo">فاخر ماركت للكراء</div>
+        <div class="header-right">
+            <input type="text" placeholder="ابحث عن المنتجات...">
+            <button class="search-btn"><i class="fas fa-search"></i></button>
+            <a href="#" class="cart"><i class="fas fa-shopping-cart"></i><span class="cart-count">3</span></a>
+            <a href="#" class="login-btn">تسجيل الدخول</a>
+            <div class="hamburger" onclick="toggleMenu()">
+                <i class="fas fa-bars"></i>
+            </div>
+        </div>
+    </header>
+    <div class="ads-bar">إعلان مميز هنا - عروض حصرية للكراء!</div>
+    <nav id="navbar">
+        <ul>
+            <li><a href="#">الرئيسية</a></li>
+            <li><a href="#">المنتجات</a></li>
+            <li><a href="#">الخدمات</a></li>
+            <li><a href="#">العروض</a></li>
+            <li><a href="#">المدونة</a></li>
+            <li><a href="#">من نحن</a></li>
+            <li><a href="#">الشروط والأحكام</a></li>
+            <li><a href="#">اتصل بنا</a></li>
+        </ul>
+    </nav>
+    <!-- شريط الإعلانات -->
+    <div class="ads-container">
+        <div class="ad-item">
+            <img src="{% static "img/adds/photo_5931403828266124587_y.jpg" %}" alt="Product 1">
+            <p>منتج 1</p>
+            <p class="price">50 دينار/يوم</p>
+        </div>
+        <div class="ad-item">
+            <img src="{% static "img/adds/photo_5931403828266124589_y.jpg" %}" alt="Product 1">
+            <p>منتج 2</p>
+            <p class="price">30 دينار/يوم</p>
+        </div>
+        <div class="ad-item">
+            <img src="{% static "img/adds/photo_5931403828266124588_y.jpg" %}" alt="Product 1">
+            <p>منتج 3</p>
+            <p class="price">70 دينار/يوم</p>
+        </div>
+        <div class="ad-item">
+            <img src="{% static "img/adds/photo_5931403828266124588_y.jpg" %}" alt="Product 1">
+            <p>منتج 4</p>
+            <p class="price">40 دينار/يوم</p>
+        </div>
+    </div>
+    <main>
+        {% block content %}
+        {% endblock %}
+    </main>
+    <footer>
+        <p>&copy; 2025 فاخر ماركت للكراء - جميع الحقوق محفوظة</p>
+    </footer>
+
+    <script>
+        function toggleMenu() {
+            const navbar = document.getElementById("navbar");
+            navbar.classList.toggle("active");
+        }
+    </script>
+</body>
+</html>

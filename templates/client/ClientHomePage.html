@@ -1,0 +1,65 @@
+{% extends "layout.html" %}
+{% load static %}
+{% block content %}
+
+    {% block clientHeader %}
+        <nav class="product-nav">
+            <ul>
+                <li><a href="#">القفطان</a></li>
+                <li><a href="#">الكاراكو</a></li>
+                <li><a href="#">الفستان الجزائري</a></li>
+                <li><a href="#">العبايات</a></li>
+                <li><a href="#">الإكسسوارات</a></li>
+            </ul>
+        </nav>
+    {% endblock clientHeader %}
+
+    {% block productsContents %}
+        <div class="products-container">
+            <h1 class="products-title">ملابسنا للكراء</h1>
+            <p class="products-welcome">مرحبًا بكم في صفحة ملابسنا التقليدية. اختر من بين مجموعة واسعة من الملابس المتاحة للكراء للأعراس والمناسبات.</p>
+            <div class="products-grid">
+                <!-- منتج 1 -->
+                <div class="product-card">
+                    <img src="{%static 'img/products/photo_5931403828266124593_y.jpg'%}" alt="Product 1" class="product-image">
+                    <h3 class="product-name">قفطان ذهبي</h3>
+                    <p class="product-description">قفطان فاخر بتطريز ذهبي، مناسب للأعراس والمناسبات الكبيرة.</p>
+                    <p class="product-price">5000 دج/يوم</p>
+                    <p class="product-availability available">متاح</p>
+                    <button class="product-details-btn">تفاصيل أكثر</button>
+                    <button class="product-add-to-cart-btn">حجز الآن</button>
+                </div>
+                <!-- منتج 2 -->
+                <div class="product-card">
+                    <img src="{%static 'img/products/photo_5931403828266124594_y.jpg'%}" alt="Product 2" class="product-image">
+                    <h3 class="product-name">كاراكو تقليدي</h3>
+                    <p class="product-description">كاراكو جزائري بتصميم تقليدي، مناسب للزفاف والحفلات.</p>
+                    <p class="product-price">4000 دج/يوم</p>
+                    <p class="product-availability not-available">غير متاح</p>
+                    <button class="product-details-btn">تفاصيل أكثر</button>
+                    <button class="product-add-to-cart-btn" disabled>غير متاح</button>
+                </div>
+                <div class="product-card">
+                    <img src="{%static 'img/products/photo_5931403828266124594_y.jpg'%}" alt="Product 3" class="product-image">
+                    <h3 class="product-name">فستان جزائري</h3>
+                    <p class="product-description">فستان جزائري بتصميم عصري، مناسب للعروس والحفلات.</p>
+                    <p class="product-price">4500 دج/يوم</p>
+                    <p class="product-availability available">متاح</p>
+                    <button class="product-details-btn">تفاصيل أكثر</button>
+                    <button class="product-add-to-cart-btn">حجز الآن</button>
+                </div>
+                <!-- منتج 4 -->
+                <div class="product-card">
+                    <img src="{%static 'img/products/photo_5931403828266124594_y.jpg'%}" alt="Product 4" class="product-image">
+                    <h3 class="product-name">عباية مطرزة</h3>
+                    <p class="product-description">عباية مطرزة بتصميم أنيق، مثالية للمناسبات الرسمية.</p>
+                    <p class="product-price">3000 دج/يوم</p>
+                    <p class="product-availability available">متاح</p>
+                    <button class="product-details-btn">تفاصيل أكثر</button>
+                    <button class="product-add-to-cart-btn">حجز الآن</button>
+                </div>
+            </div>
+        </div>
+    {% endblock productsContents %}
+
+{% endblock content %}

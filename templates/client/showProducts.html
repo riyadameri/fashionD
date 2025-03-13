@@ -1,0 +1,16 @@
+{% extends "layout.html" %}
+
+{% block content %}
+    <h1>show Customers</h1>
+    <section>
+            {% for customer in  customers%}
+            <article>
+                <h2>{{customer.name}}</h2>
+                <p>{{customer.email}}</p>
+            </article>
+        {% endfor %}
+    </section>
+
+
+    <h1>show Prouducts</h1>
+{% endblock  %}
